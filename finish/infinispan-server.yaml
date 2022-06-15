@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infinispan-server-deployment
+spec:
+  selector:
+    matchLabels:
+      app: infinispan-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: infinispan-server
+    spec:
+      containers:
+      - name: infinispan-server-container
+        image: infinispan/server
+        ports:
+        - containerPort: 11222
+        env:
+          - name: USER
+            value: "sampleUser"
+          - name: PASS
+            value: "samplePassword"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: infinispan-server
+spec:
+  type: ClusterIP
+  selector:
+    app: infinispan-server
+  ports:
+  - protocol: TCP
+    port: 11222
