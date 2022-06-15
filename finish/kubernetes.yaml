@@ -20,6 +20,10 @@ spec:
         ports:
         - name: http
           containerPort: 9080
+        env:
+        - name: infinispan.server.host
+          value: infinispan-server
+
 ---
 apiVersion: v1
 kind: Service
