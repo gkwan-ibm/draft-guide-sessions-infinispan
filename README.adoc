@@ -1,4 +1,4 @@
-// Copyright (c) 2019, 2022 IBM Corporation and others.
+// Copyright (c) 2022 IBM Corporation and others.
 // Licensed under Creative Commons Attribution-NoDerivatives
 // 4.0 International (CC BY-ND 4.0)
 //   https://creativecommons.org/licenses/by-nd/4.0/
@@ -7,7 +7,7 @@
 //     IBM Corporation
 //
 :page-layout: guide-multipane
-:projectid: sessions
+:projectid: sessions-infinispan
 :page-duration: 25 minutes
 :page-releasedate: 2019-07-23
 :page-description: Learn how to create, use and cache HTTP session data.

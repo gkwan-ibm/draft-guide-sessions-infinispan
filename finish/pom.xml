@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>io.openliberty.guides</groupId>
-    <artifactId>guide-sessions</artifactId>
+    <artifactId>guide-sessions-infinispan</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -15,6 +15,7 @@
         <liberty.var.default.http.port>9080</liberty.var.default.http.port>
         <liberty.var.default.https.port>9443</liberty.var.default.https.port>
         <liberty.var.app.context.root>${project.artifactId}</liberty.var.app.context.root>
+        <liberty.var.infinispan.server>localhost:11222</liberty.var.infinispan.server>
     </properties>
 
     <dependencies>

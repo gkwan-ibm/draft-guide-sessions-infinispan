@@ -122,11 +122,11 @@ public class CartSessionIT {
         String result = null;
         switch (method) {
         case POST:
-            result = "http://localhost:" + port + "/guide-sessions/cart/" + ITEM + "&"
+            result = "http://localhost:" + port + "/guide-sessions-infinispan/cart/" + ITEM + "&"
                             + PRICE;
             break;
         case GET:
-            result = "http://localhost:" + port + "/guide-sessions/cart";
+            result = "http://localhost:" + port + "/guide-sessions-infinispan/cart";
             break;
         default:
             break;
