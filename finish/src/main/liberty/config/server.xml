@@ -26,16 +26,18 @@
     <variable name="default.http.port" defaultValue="9080"/>
     <variable name="default.https.port" defaultValue="9443"/>
     <variable name="app.context.root" defaultValue="guide-sessions"/>
+    <variable name="infinispan.server.host" defaultValue="localhost"/>
+    <variable name="infinispan.server.port" defaultValue="11222"/>
 
     <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}"
         id="defaultHttpEndpoint" host="*" />
     <!-- tag::httpSessionCache[] -->
     <httpSessionCache libraryRef="infinispanLib" enableBetaSupportForInfinispan="true">
-        <properties infinispan.client.hotrod.server_list="infinispan-server:11222"/>
+        <properties infinispan.client.hotrod.server_list="${infinispan.server.host}:${infinispan.server.port}"/>
         <properties infinispan.client.hotrod.auth_username="sampleUser"/>
         <properties infinispan.client.hotrod.auth_password="samplePassword"/>
         <properties infinispan.client.hotrod.auth_realm="default"/>
-        <properties infinispan.client.hotrod.sasl_mechanism="SCRAM-SHA-512"/> <!-- PLAIN -->
+        <properties infinispan.client.hotrod.sasl_mechanism="SCRAM-SHA-512"/>
         <properties infinispan.client.hotrod.marshaller="org.infinispan.commons.marshall.JavaSerializationMarshaller"/>
     </httpSessionCache>
     <!-- end::httpSessionCache[] -->
