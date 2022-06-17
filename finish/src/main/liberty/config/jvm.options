@@ -1,1 +1,4 @@
--Dinfinispan.deserialization.allowlist.regexps=.*
+# Set if IPv6 is not supported.
+#-Djava.net.preferIPv4Stack=true
+# This value matches the DNS lookup of the headless service defined in the previous step. Your domain might vary.
+-Djgroups.dns.query=infinispan-embedded.myproject.svc.cluster.local

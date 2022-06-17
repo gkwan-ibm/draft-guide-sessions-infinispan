@@ -15,7 +15,6 @@
         <liberty.var.default.http.port>9080</liberty.var.default.http.port>
         <liberty.var.default.https.port>9443</liberty.var.default.https.port>
         <liberty.var.app.context.root>${project.artifactId}</liberty.var.app.context.root>
-        <liberty.var.infinispan.server>localhost:11222</liberty.var.infinispan.server>
     </properties>
 
     <dependencies>
@@ -37,7 +36,7 @@
         <!-- Infinispan Dependency -->
         <dependency>
             <groupId>org.infinispan</groupId>
-            <artifactId>infinispan-jcache-remote</artifactId>
+            <artifactId>infinispan-jcache</artifactId>
             <version>13.0.10.Final</version>
             <scope>provided</scope>
         </dependency>
@@ -103,7 +102,7 @@
                             <location>${project.build.directory}/liberty/wlp/usr/shared/resources/infinispan</location>
                             <dependency>
                                 <groupId>org.infinispan</groupId>
-                                <artifactId>infinispan-jcache-remote</artifactId>
+                                <artifactId>infinispan-jcache</artifactId>
                             </dependency>
                             <dependency>
                                 <groupId>org.slf4j</groupId>
